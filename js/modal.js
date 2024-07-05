@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const existingProjectsSelect = document.getElementById('existing-projects-select');
     const colorPicker = document.getElementById('color-picker');
     const addButton = document.getElementById('add-button');
+    const dateLabel = document.querySelector('label[for="date"]');
 
     addButton.addEventListener('click', () => {
         resetForm();
@@ -27,9 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (linkProjectsCheckbox.checked) {
             existingProjectsSelect.style.display = 'inline-block';
             colorPicker.style.display = 'none';
+            dateLabel.textContent = 'End Date:';
         } else {
             existingProjectsSelect.style.display = 'none';
             colorPicker.style.display = 'inline-block';
+            dateLabel.textContent = 'Start Date:';
         }
     });
 
@@ -39,7 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const date = document.getElementById('date').value;
         const description = document.getElementById('description').value;
         const selectedProject = existingProjectsSelect.value;
-        const color = colorPicker.value;
+        let color = colorPicker.value;
+
+        if (selectedProject !== "") {
+            const startItem = document.querySelectorAll('.timeline-item')[selectedProject];
+            color = startItem.style.backgroundColor; // Get the color of the existing project
+        }
+
         if (title && date && description) {
             createTimelineItem(title, date, description, selectedProject, color);
             form.reset();
@@ -64,5 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
         linkProjectsCheckbox.checked = false; // Reset the checkbox
         existingProjectsSelect.style.display = 'none';
         colorPicker.style.display = 'inline-block';
+        dateLabel.textContent = 'Start Date:';
     }
 });

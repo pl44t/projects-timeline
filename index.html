@@ -17,6 +17,7 @@
     <header>
         <h1>Project and Learning Timeline</h1>
         <div class="header-buttons">
+            <input type="text" id="search-bar" placeholder="Search projects..." />
             <button id="add-button">+ Add</button>
             <button id="settings-button">⚙️</button>
         </div>
@@ -43,7 +44,7 @@
                         <input type="checkbox" id="link-projects-checkbox">
                         <span class="checkmark"></span>
                     </label>
-                    <label for="link-projects-checkbox">Link to existing project</label>
+                    <label for="link-projects-checkbox" id="link-projects-label">Link to an existing project</label>
                     <select id="existing-projects-select" style="display: none;">
                         <option value="">Select a project</option>
                     </select>
@@ -58,15 +59,60 @@
         <h2>Settings</h2>
         <h3>Themes</h3>
         <div class="theme-grid">
-            <div class="theme-box" data-theme="theme1"></div>
-            <div class="theme-box" data-theme="theme2"></div>
-            <div class="theme-box" data-theme="theme3"></div>
-            <div class="theme-box" data-theme="theme4"></div>
-            <div class="theme-box" data-theme="theme5"></div>
-            <div class="theme-box" data-theme="theme6"></div>
-            <div class="theme-box" data-theme="theme7"></div>
-            <div class="theme-box" data-theme="theme8"></div>
-            <div class="theme-box" data-theme="theme9"></div>
+            <div class="theme-box" data-theme="theme1">
+                <div class="color-corner top-left"></div>
+                <div class="color-corner top-right"></div>
+                <div class="color-corner bottom-left"></div>
+                <div class="color-corner bottom-right"></div>
+            </div>
+            <div class="theme-box" data-theme="theme2">
+                <div class="color-corner top-left"></div>
+                <div class="color-corner top-right"></div>
+                <div class="color-corner bottom-left"></div>
+                <div class="color-corner bottom-right"></div>
+            </div>
+            <div class="theme-box" data-theme="theme3">
+                <div class="color-corner top-left"></div>
+                <div class="color-corner top-right"></div>
+                <div class="color-corner bottom-left"></div>
+                <div class="color-corner bottom-right"></div>
+            </div>
+            <div class="theme-box" data-theme="theme4">
+                <div class="color-corner top-left"></div>
+                <div class="color-corner top-right"></div>
+                <div class="color-corner bottom-left"></div>
+                <div class="color-corner bottom-right"></div>
+            </div>
+            <div class="theme-box" data-theme="theme5">
+                <div class="color-corner top-left"></div>
+                <div class="color-corner top-right"></div>
+                <div class="color-corner bottom-left"></div>
+                <div class="color-corner bottom-right"></div>
+            </div>
+            <div class="theme-box" data-theme="theme6">
+                <div class="color-corner top-left"></div>
+                <div class="color-corner top-right"></div>
+                <div class="color-corner bottom-left"></div>
+                <div class="color-corner bottom-right"></div>
+            </div>
+            <div class="theme-box" data-theme="theme7">
+                <div class="color-corner top-left"></div>
+                <div class="color-corner top-right"></div>
+                <div class="color-corner bottom-left"></div>
+                <div class="color-corner bottom-right"></div>
+            </div>
+            <div class="theme-box" data-theme="theme8">
+                <div class="color-corner top-left"></div>
+                <div class="color-corner top-right"></div>
+                <div class="color-corner bottom-left"></div>
+                <div class="color-corner bottom-right"></div>
+            </div>
+            <div class="theme-box" data-theme="theme9">
+                <div class="color-corner top-left"></div>
+                <div class="color-corner top-right"></div>
+                <div class="color-corner bottom-left"></div>
+                <div class="color-corner bottom-right"></div>
+            </div>
         </div>
     </div>
 
@@ -74,5 +120,6 @@
     <script src="js/modal.js"></script>
     <script src="js/timeline.js"></script>
     <script src="js/sidebar.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>

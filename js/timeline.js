@@ -8,7 +8,7 @@ function createTimelineItem(title, date, description, selectedProject, color) {
     itemTitle.textContent = title;
 
     const itemDate = document.createElement('p');
-    itemDate.textContent = `Start Date: ${date}`;
+    itemDate.textContent = selectedProject !== "" ? `End Date: ${date}` : `Start Date: ${date}`;
 
     const itemDescription = document.createElement('p');
     itemDescription.textContent = description;
@@ -21,10 +21,9 @@ function createTimelineItem(title, date, description, selectedProject, color) {
         const startItem = document.querySelectorAll('.timeline-item')[selectedProject];
         const connector = document.createElement('div');
         connector.className = 'connector';
-        connector.textContent = 'Connected';
+        connector.textContent = ''; // Remove text content for the connector
         connector.style.backgroundColor = color;
         startItem.appendChild(connector);
-        newItem.appendChild(connector.cloneNode(true));
     }
 
     timeline.appendChild(newItem);

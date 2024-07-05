@@ -77,5 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
             default:
                 break;
         }
+
+        // Update the sidebar color
+        sidebar.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color');
     }
 });
