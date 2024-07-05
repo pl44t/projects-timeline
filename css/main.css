@@ -1,16 +1,22 @@
+:root {
+  --text-color: #4a69bd;
+  --body-bg-color: #6a89cc;
+  --header-bg-color: #82ccdd;
+  --accent-color: #60a3bc;
+  --hover-bg-color: #ffe6e6;
+  --hover-text-color: #000;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fdfdfe;
-  color: #333;
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-top: 80px; /* Adjust padding to avoid content hiding behind the header */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 main {
-  width: 90%;
-  max-width: 800px;
-  margin: 20px 0;
+  padding-top: 70px; /* Add padding to ensure the first project is visible */
 }

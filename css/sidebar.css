@@ -1,0 +1,82 @@
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fdfdfe;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.sidebar:hover {
+  width: 250px;
+}
+
+.sidebar h2,
+.sidebar h3 {
+  padding: 10px;
+  text-align: center;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+  margin-top: auto;
+}
+
+.theme-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.theme-box:hover {
+  transform: scale(1.1);
+}
+
+/* Example theme colors */
+.theme-box[data-theme="theme1"] {
+  background: linear-gradient(to right, #4a69bd, #6a89cc, #82ccdd, #60a3bc);
+}
+
+.theme-box[data-theme="theme2"] {
+  background: linear-gradient(to right, #78e08f, #38ada9, #b8e994, #60a3bc);
+}
+
+.theme-box[data-theme="theme3"] {
+  background: linear-gradient(to right, #f8c291, #e55039, #f3a683, #cf6a87);
+}
+
+.theme-box[data-theme="theme4"] {
+  background: linear-gradient(to right, #60a3bc, #3c6382, #82ccdd, #78e08f);
+}
+
+.theme-box[data-theme="theme5"] {
+  background: linear-gradient(to right, #ff9a9e, #fecfef, #f78fb3, #cf6a87);
+}
+
+.theme-box[data-theme="theme6"] {
+  background: linear-gradient(to right, #e66767, #ff6b6b, #ffcccc, #f8c291);
+}
+
+.theme-box[data-theme="theme7"] {
+  background: linear-gradient(to right, #38ada9, #78e08f, #b8e994, #60a3bc);
+}
+
+.theme-box[data-theme="theme8"] {
+  background: linear-gradient(to right, #6a89cc, #4a69bd, #60a3bc, #cf6a87);
+}
+
+.theme-box[data-theme="theme9"] {
+  background: linear-gradient(to right, #82ccdd, #60a3bc, #3c6382, #cf6a87);
+}

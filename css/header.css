@@ -1,6 +1,6 @@
 header {
-  background-color: #ffddcc;
-  color: #333;
+  background-color: var(--header-bg-color);
+  color: var(--text-color);
   padding: 20px;
   width: 100%;
   text-align: center;
@@ -10,11 +10,22 @@ header {
   align-items: center;
   font-family: 'Lexend', sans-serif;
   font-weight: 600;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 header button {
-  background-color: #fff;
-  color: #ff7f50;
+  background-color: var(--accent-color);
+  color: var(--text-color);
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -26,5 +37,14 @@ header button {
 }
 
 header button:hover {
-  background-color: #ffe6e6;
+  background-color: var(--hover-bg-color);
+  color: var(--hover-text-color);
+}
+
+#settings-button {
+  margin-right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
 }

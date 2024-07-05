@@ -1,3 +1,39 @@
+.timeline {
+    position: relative;
+    margin-top: 20px;
+    padding-left: 45px; /* Add padding to the left to ensure the project tiles don't go offscreen */
+}
+
+.timeline-item {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.connector {
+    position: absolute;
+    left: -10px; /* Position the connector to the left of the project tile */
+    width: 20px;
+    height: 20px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 12px;
+}
+
+
 .timeline-item {
   padding: 20px 30px;
   position: relative;
