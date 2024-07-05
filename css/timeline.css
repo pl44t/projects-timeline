@@ -32,12 +32,9 @@
 }
 
 /* Styles for linked projects */
-.timeline-item.linked-start {
-  background-color: #e6ffe6;
-}
-
+.timeline-item.linked-start,
 .timeline-item.linked-end {
-  background-color: #ffe6e6;
+  border: 2px solid #000; /* Outline to indicate linkage */
 }
 
 .timeline-item:nth-child(odd) {

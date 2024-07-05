@@ -19,9 +19,10 @@ const callbackFunc = () => {
     }
 };
 
-const createTimelineItem = (title, date, description, linkedProjectIndex) => {
+const createTimelineItem = (title, date, description, linkedProjectIndex, color) => {
     const newItem = document.createElement('div');
     newItem.classList.add('timeline-item');
+    newItem.style.backgroundColor = color;
     newItem.innerHTML = `
         <div class="timeline-content">
             <h2>${title}</h2>
@@ -35,6 +36,9 @@ const createTimelineItem = (title, date, description, linkedProjectIndex) => {
         if (linkedProject) {
             linkedProject.classList.add('linked-start');
             newItem.classList.add('linked-end');
+            const linkedColor = window.getComputedStyle(linkedProject).backgroundColor;
+            linkedProject.style.backgroundColor = linkedColor;
+            newItem.style.backgroundColor = linkedColor;
         }
     }
 

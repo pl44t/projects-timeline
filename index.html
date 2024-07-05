@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Timeline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/modal.css">
@@ -31,12 +34,17 @@
                 <input type="text" id="date" name="date" required>
                 <label for="description">Description:</label>
                 <textarea id="description" name="description" required></textarea>
-                <label>
-                    <input type="checkbox" id="link-projects-checkbox"> Link to existing project
-                </label>
-                <select id="existing-projects-select" style="display: none;">
-                    <option value="">Select a project</option>
-                </select>
+                <div class="checkbox-container">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="link-projects-checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label for="link-projects-checkbox">Link to existing project</label>
+                    <select id="existing-projects-select" style="display: none;">
+                        <option value="">Select a project</option>
+                    </select>
+                    <input type="color" id="color-picker" name="color-picker" value="#ff6347">
+                </div>
                 <button type="submit">Add</button>
             </form>
         </div>

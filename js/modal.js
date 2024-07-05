@@ -3,6 +3,8 @@ const closeModal = document.getElementsByClassName('close')[0];
 const form = document.getElementById('add-form');
 const linkProjectsCheckbox = document.getElementById('link-projects-checkbox');
 const existingProjectsSelect = document.getElementById('existing-projects-select');
+const colorPicker = document.getElementById('color-picker');
+const colorPickerLabel = document.getElementById('color-picker-label');
 
 closeModal.onclick = () => {
     modal.style.display = 'none';
@@ -16,10 +18,14 @@ window.onclick = (event) => {
 
 linkProjectsCheckbox.addEventListener('change', () => {
     if (linkProjectsCheckbox.checked) {
-        existingProjectsSelect.style.display = 'block';
+        existingProjectsSelect.style.display = 'inline-block';
+        colorPicker.style.display = 'none';
+        colorPickerLabel.style.display = 'none';
         populateExistingProjects();
     } else {
         existingProjectsSelect.style.display = 'none';
+        colorPicker.style.display = 'inline-block';
+        colorPickerLabel.style.display = 'inline-block';
     }
 });
 
@@ -29,10 +35,12 @@ form.addEventListener('submit', (event) => {
     const date = document.getElementById('date').value;
     const description = document.getElementById('description').value;
     const selectedProject = existingProjectsSelect.value;
+    const color = colorPicker.value;
     if (title && date && description) {
-        createTimelineItem(title, date, description, selectedProject);
+        createTimelineItem(title, date, description, selectedProject, color);
         form.reset();
         modal.style.display = 'none';
+        resetForm();  // Add this line to reset the form
     }
 });
 
@@ -46,4 +54,11 @@ function populateExistingProjects() {
         option.textContent = title;
         existingProjectsSelect.appendChild(option);
     });
+}
+
+function resetForm() {
+    linkProjectsCheckbox.checked = false; // Reset the checkbox
+    existingProjectsSelect.style.display = 'none';
+    colorPicker.style.display = 'inline-block';
+    colorPickerLabel.style.display = 'inline-block';
 }

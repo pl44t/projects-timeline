@@ -8,6 +8,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
 }
 
 header button {
@@ -19,6 +21,8 @@ header button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
 }
 
 header button:hover {
